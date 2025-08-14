@@ -14,14 +14,14 @@ return; }
 function verificarIntento() 
 {let numeroUsuario = parseInt(document.getElementById("valorUsuario").value); 
      if(numeroUsuario === numeroSecreto) 
-    {asignarTextoElemento("p",`Acertaste!, bien hecho!,los hiciste en ${intentos +1 } ${intentos +1 === 1 ?"intento" : "intentos"}`);
+    {asignarTextoElemento("p",`Acertaste!, bien hecho!,los hiciste en ${intentos  } ${intentos === 1 ?"intento" : "intentos"}`);
    document.getElementById("reiniciar").removeAttribute("disabled");
 } else  
      { if (numeroUsuario > numeroSecreto) 
                 {asignarTextoElemento("p","El numero es menor");}
                 else {asignarTextoElemento("p","El numero es mayor");
-                    intentos++;
-                }}
+                } intentos++;
+                }
                 
  if (intentos  == intentosMaximos ) {asignarTextoElemento("p",`Game over ya fueron ${intentosMaximos} intentos`)
  document.getElementById("reiniciar").removeAttribute("disabled");
@@ -56,7 +56,7 @@ function condicionesIniciales() {
 asignarTextoElemento("h1","Juego del numero secreto");
 asignarTextoElemento("p",`Indica el numero del 1 al ${numeroMaximo}`);
 numeroSecreto = generarNumeroSecreto();
-intentos = 0
+intentos = 1;
 
  }
 function reiniciarJuego() { 
