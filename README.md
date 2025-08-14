@@ -22,5 +22,3 @@ El objetivo del juego es adivinar un número secreto generado aleatoriamente den
 
 
 
-   ```bash
-   git clone https://github.com/tu-usuario/juego-numero-secreto.git
